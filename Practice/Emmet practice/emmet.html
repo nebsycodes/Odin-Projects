@@ -1,0 +1,128 @@
+// emmet is all about productivity writing code fast.
+
+// !
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+// a
+<a href="https://www.google.com">Google</a>
+
+// div
+<div></div>
+
+// .class
+<div class="class"></div>
+
+// link
+<link rel="stylesheet" href="">
+
+// button
+<button></button>
+
+// .button
+<div class="button"></div>
+
+// create children elements
+/ div.purple>span.cyan (the > stands for the child, so purple is the adult and cyan is the child)
+<div class="purple"><span class="cyan"></span></div>
+
+// lists
+/ header>nav>ul>li*3
+<header>
+    <nav>
+        <ul>
+            <li>dwadwa</li>
+            <li>dwdw</li>
+            <li>dwdawdwa</li>
+        </ul>
+    </nav>
+</header>
+
+// lists
+/ header>nav>ul>li*3{example text}
+<header>
+    <nav>
+        <ul>
+            <li>example text</li>
+            <li>example text</li>
+            <li>example text</li>
+        </ul>
+    </nav>
+</header>
+
+// lists
+/ header>nav>ul>li*3{listen item $}
+<header>
+    <nav>
+        <ul>
+            <li>listen item 1</li>
+            <li>listen item 2</li>
+            <li>listen item 3</li>
+        </ul>
+    </nav>
+</header>
+
+// lists
+/ header>nav>ul>li*3.class-${listen item $}
+<header>
+    <nav>
+        <ul>
+            <li class="class-1">listen item 1</li>
+            <li class="class-2">listen item 2</li>
+            <li class="class-3">listen item 3</li>
+        </ul>
+    </nav>
+</header>
+
+// lists
+/ header>nav>ul>li*3.class-${listen item $$}
+<header>
+    <nav>
+        <ul>
+            <li class="class-1">listen item 01</li>
+            <li class="class-2">listen item 02</li>
+            <li class="class-3">listen item 03</li>
+        </ul>
+    </nav>
+</header>
+
+//create a shell of a Document
+/ header+main+footer 
+<header></header>
+<main></main>
+<footer></footer>
+
+// create a child of header
+/ (header>nav)+main+footer
+<header>
+    <nav></nav>
+</header>
+<main></main>
+<footer></footer>
+
+/// Real example, create a header, inside the header a heading as well as a nav ordered list of 5 items inside of it, as well as a main and footer inside of it
+// As you can see from the example how fast you can create a structured ordered list from this just from one line saving a great amount of time.
+/ (header>h2(Heading)+nav>ol>li*5>a(Link $))main+footer
+<header>
+    <h2></h2>
+    <Heading></Heading>
+    <nav>
+        <ol>
+            <li><a href="">Link 1</a></li>
+            <li><a href="">Link 2</a></li>
+            <li><a href="">Link 3</a></li>
+            <li><a href="">Link 4</a></li>
+            <li><a href="">Link 5</a></li>
+        </ol>
+    </nav>
+</header>+main+footer
